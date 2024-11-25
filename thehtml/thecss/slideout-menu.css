@@ -1,48 +1,31 @@
 .slideout-menu {
-    position: fixed;
-    left: -250px; /* Initial position - outside the screen */
-    top: 80px; /* Adjust the top value to create space for the menu toggle */
-    width: 250px;
-    height: 100vh;
-    background: #363636;
-    color: #fdffc9;
-    transition: left 0.3s ease-in;
-    font-family: 'Quicksand', sans-serif;
-    z-index: 9999;
-    border-radius: 5px;
-   padding: 10px;
-  width: 200px;;
-  height:550px;
-  }
-  
-  .slideout-menu a {
-    display: block;
-    padding: 15px;
-    color: #fdffc9;
-    text-decoration: none;
-    transition: background 0.3s;
-    font-family: 'Quicksand', sans-serif;
-  }
-  
-  .slideout-menu a:hover {
-    background: rgba(0, 0, 0, 0.3);
-  }
-  
-  .menu-toggle {
-    position: fixed;
-    top: 20px;
-    left: 20px;
-    cursor: pointer;
-    z-index: 10000;
-    color: #fdffc9;
-    font-size: 24px;
-    font-family: 'Quicksand', sans-serif;
-  }
-  
-  .material-icons {
-    font-size: 28px;
-    color: #fdffc9;
-  }
-  
-  
-  
+  display: flex;
+  flex-direction: column;
+  position: fixed;
+  right: -250px;
+  top: 0;
+  width: 250px;
+  height: 100%;
+  background: #333;
+  padding: 20px;
+  box-shadow: -4px 0 8px rgba(0, 0, 0, 0.2);
+  transition: right 0.3s ease;
+  overflow-y: auto; /* Enables vertical scrolling */
+  overflow-x: hidden; /* Prevents horizontal scrolling */
+  scrollbar-width: thin; /* Firefox specific */
+  scrollbar-color: #4287f5 #333; /* Custom scrollbar colors */
+}
+
+/* For Webkit browsers (Chrome, Edge, Safari) */
+.slideout-menu::-webkit-scrollbar {
+  width: 8px;
+}
+
+.slideout-menu::-webkit-scrollbar-thumb {
+  background-color: #4287f5;
+  border-radius: 4px;
+}
+
+.slideout-menu::-webkit-scrollbar-track {
+  background: #333;
+}

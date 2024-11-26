@@ -3,10 +3,10 @@ document.addEventListener('DOMContentLoaded', function() {
   var slideoutMenu = document.querySelector('.slideout-menu');
 
   menuToggle.addEventListener('click', function() {
-      if (slideoutMenu.style.left === '-250px' || !slideoutMenu.style.left) {
-          slideoutMenu.style.left = '0';
-      } else {
-          slideoutMenu.style.left = '-250px';
-      }
+    if (slideoutMenu.style.left === '-250px') {
+      slideoutMenu.style.left = '0';
+    } else {
+      slideoutMenu.style.left = '-250px';
+    }
   });
 });

@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Advanced Design</title>
+    <link rel="stylesheet" type="text/css" href="thecss/advDez.css">
+    <link rel="stylesheet" type="text/css" href="thecss/slideout-menu.css">
+</head>
+<body>
+    <div class="menu-toggle">
+        <span class="material-icons">Menu</span>
+    </div>
+    <div class="slideout-menu">
+        <a href="aboutMe.html">About</a>
+        <a href="type2.html">Type Two</a>
+        <a href="type3.html">Type Three</a>
+        <a href="branding.html">Branding</a>
+        <a href="advDez.html">Advanced Design</a>
+    </div>
+
+    <script src="thejavascript/slideout-menu.js"></script>
+  
+
+    <a href="index.html">
+      <img id="logo" src="imagesforseniorportfolio/TS By Daniel Calderon - Copy.png" alt="TS by Daniel">
+    </a>
+
+    <h2>Motion Graphics: Logo</h2>
+    <div class="box-section">
+      <video id="dynamic-video" autoplay muted>
+        <source src="videoforseniorportfolio/tsvidaf.mp4" type="video/mp4">
+      </video>
+      <button id="toggle-loop">Toggle Loop</button>
+
+      <script>
+        const video = document.getElementById('dynamic-video');
+        const button = document.getElementById('toggle-loop');
+      
+        button.addEventListener('click', () => {
+          video.loop = !video.loop; // Toggle loop
+          button.textContent = video.loop ? "Disable Loop" : "Enable Loop";
+        });
+      </script>
+      
+      
+        <p>
+            I was able to make and separate the logo move in a fascinating way by using anchor points, the mask, and the transform. 
+            The use of several points allowed the logo's components to be moved or transformed into different locations within the frame, 
+            and the mask allowed the logo to be divided into two halves rather than one.
+        </p>
+    </div>
+
+    <h2>Social Justice Editorial Spreads</h2>
+    <div class="box-section">
+        <p>
+            As the world population continues to grow, so does the demand for goods and services. One sector that is at the forefront of meeting this demand is manufacturing. 
+        </p>
+        <img src="imagesforseniorportfolio/MAG1FD.png" alt="Social Justice Image 1">
+    </div>
+    <div class="box-section">
+        <img src="imagesforseniorportfolio/MAG1FD2.png" alt="Image 2">
+        <img src="imagesforseniorportfolio/MAG1FD3.png" alt="Image 3">
+    </div>
+    <div class="box-section">
+        <p>
+            Through the editorial montage that I have created, my aim is to showcase the potential of using waste as a resource for creating new materials.
+        </p>
+        <img src="imagesforseniorportfolio/MAG1FD4.png" alt="Image 4">
+        <img src="imagesforseniorportfolio/MAG1FD5.png" alt="Image 5">
+    </div>
+
+    <a href="index.html">Back To Home Page</a>
+</body>
+</html>

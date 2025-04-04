@@ -1,204 +1,55 @@
-/* General Body and Typography Styles */
+/* Reset and Basics */
 body {
-  background: rgba(159, 159, 159, 0.877);
-  margin: 0;
-  font-family: sans-serif;
-}
-
-h1 {
-  text-align: center;
-  font-family: monospace;
-  font-size: 40px;
-  font-weight: bold;
-  color: whitesmoke;
-  text-shadow: 2px 2px grey;
-  background: #000000;
-  border-radius: 25px;
-  padding: 20px;
-  width: auto;
-  height: 75px;
-}
-
-p {
-  font-family: sans-serif;
-  color: black;
-  font-size: 18px;
-}
-
-ol {
-  color: aliceblue;
-  font-family: monospace;
-  font-size: 20px;
-}
-
-/* Image Styles */
-img {
-  width: 20%;
-  height: auto;
-}
-
-#logo {
-  width: 5%;
-  height: auto;
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-/* Banner Section */
-.banner {
-  background: black;
-  border-radius: 25px;
-  padding: 20px;
-  width: auto;
-  height: 75px;
-}
-
-.banner__content {
-  padding: 16px;
-  max-width: 500px;
-  margin: 0 auto;
-  display: flex;
-  align-items: center;
-}
-
-.banner__text {
-  font-family: 'Quicksand', monospace, sans-serif;
-  font-weight: bold;
-  text-shadow: 2px 2px grey;
-  font-size: 35px;
-  flex-grow: 1;
-  line-height: 1.4;
-}
-
-.banner__close {
-  background: none;
-  border: none;
-  cursor: pointer;
-}
-
-.banner__text, .banner__close > span {
-  color: whitesmoke;
-}
-
-/* Container Styles */
-.container {
-  display: flex;
-  flex-wrap: wrap; /* Adjust to ensure compatibility */
-}
-
-/* Scrollbar Customization (Compatible with slideout-menu.css) */
-.scrollbar {
-  scrollbar-width: thin;
-  scrollbar-color: #4287f5 #333; /* Matches slideout-menu scrollbar */
-}
-
-.scrollbar::-webkit-scrollbar {
-  width: 8px;
-}
-
-.scrollbar::-webkit-scrollbar-thumb {
-  background-color: #4287f5;
-  border-radius: 4px;
-}
-
-.scrollbar::-webkit-scrollbar-track {
-  background: #333;
-}
-
-/* Basic Body Styling */
-body {
-  background: #f9f9f9;
-  font-family: Arial, sans-serif;
-  color: #333;
   margin: 0;
   padding: 0;
+  font-family: 'Helvetica Neue', sans-serif;
+  background-color: #f4f4f4;
+  color: #222;
 }
 
-/* Main Heading */
+/* Main Layout */
 h1 {
   text-align: center;
-  font-family: 'Roboto', sans-serif;
-  font-size: 40px;
-  font-weight: bold;
-  color: #ffffff;
-  background: #4287f5;
-  text-shadow: 2px 2px #333333;
-  border-radius: 25px;
-  padding: 20px;
-  width: auto;
-  margin: 20px;
+  font-size: 36px;
+  color: #111;
+  padding: 40px 0;
+  border-bottom: 1px solid #ccc;
+  margin-bottom: 20px;
+  letter-spacing: 1px;
 }
 
-/* Section Styling */
-section {
-  margin: 20px auto;
-  padding: 15px;
-  width: 80%;
+/* Paragraphs */
+p {
   max-width: 800px;
-  background-color: #ffffff;
-  border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-}
-
-section h2 {
-  font-size: 28px;
-  color: #4287f5;
-  margin-bottom: 10px;
-  font-family: 'Roboto', sans-serif;
-  border-bottom: 2px solid #4287f5;
-  padding-bottom: 5px;
-}
-
-section p {
-  font-size: 18px;
-  color: #333;
-  line-height: 1.6;
-  margin: 10px 0;
-}
-
-/* Footer Styling */
-footer {
-  background-color: #333333;
-  color: #ffffff;
-  padding: 20px 0;
-  text-align: center;
+  margin: 20px auto;
   font-size: 16px;
+  line-height: 1.6;
+  color: #444;
 }
 
-footer a {
-  color: #ffffff;
-  text-decoration: none;
-  margin: 0 10px;
-  font-weight: bold;
-}
-
-footer a:hover {
-  color: #4287f5;
-  text-decoration: underline;
-}
-
-/* Image Styling */
-img {
-  width: 20%;
+/* Logo */
+#logo {
+  display: block;
+  margin: 30px auto;
+  width: 80px;
   height: auto;
-  margin: 10px;
+}
+
+/* Images */
+img {
+  width: 200px;
+  margin: 20px;
+  display: inline-block;
   transition: transform 0.3s ease;
+  filter: grayscale(100%);
 }
 
 img:hover {
-  transform: scale(1.1);
+  transform: scale(1.05);
+  filter: grayscale(0%);
 }
 
-/* Logo Styling */
-#logo {
-  width: 5%;
-  height: auto;
-  display: block;
-  margin: 20px auto;
-}
-
-/* Menu Toggle Styling */
+/* Slideout Menu */
 .menu-toggle {
   position: absolute;
   top: 20px;
@@ -207,66 +58,47 @@ img:hover {
 }
 
 .menu-toggle span {
-  font-size: 24px;
-  color: #4287f5;
+  font-size: 28px;
+  color: #333;
 }
 
-/* Slideout Menu */
 .slideout-menu {
-  display: flex;
-  flex-direction: column;
   position: fixed;
-  right: -250px;
   top: 0;
+  right: -250px;
   width: 250px;
   height: 100%;
-  background: #333;
+  background: #111;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
   padding: 60px 20px;
-  box-shadow: -4px 0 8px rgba(0, 0, 0, 0.2);
   transition: right 0.3s ease;
 }
 
 .slideout-menu a {
-  color: #ffffff;
+  color: #eee;
   text-decoration: none;
-  font-size: 18px;
   margin: 10px 0;
+  font-size: 18px;
+  transition: color 0.2s ease;
 }
 
 .slideout-menu a:hover {
-  color: #4287f5;
+  color: #ccc;
 }
 
-/* Link Styling */
-a {
-  color: #4287f5;
-  text-decoration: none;
-}
-
-a:hover {
-  text-decoration: underline;
-}
-
-/* Responsive Design for Smaller Screens */
+/* Responsive */
 @media (max-width: 768px) {
-  h1 {
-      font-size: 32px;
-  }
-
-  section {
-      width: 90%;
-  }
-
   img {
-      width: 40%;
-  }
-
-  .menu-toggle {
-      top: 10px;
-      right: 10px;
+    width: 45%;
   }
 
   #logo {
-      width: 10%;
+    width: 60px;
+  }
+
+  h1 {
+    font-size: 28px;
   }
 }

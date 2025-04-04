@@ -41,7 +41,7 @@ img {
   margin: 20px;
   display: inline-block;
   transition: transform 0.3s ease;
-  filter: grayscale(100%);
+  filter: grayscale(0%);
 }
 
 img:hover {

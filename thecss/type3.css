@@ -63,13 +63,43 @@ img:hover {
   margin: 30px auto;
 }
 
-.menu-toggle span {
-  font-size: 24px;
-  color: #ffb347;
-  background: #222;
-  border-radius: 5px;
-  padding: 10px;
+/* Slideout Menu */
+.menu-toggle {
+  position: absolute;
+  top: 20px;
+  right: 20px;
   cursor: pointer;
+}
+
+.menu-toggle span {
+  font-size: 28px;
+  color: #ffffff;
+}
+
+.slideout-menu {
+  position: fixed;
+  top: 0;
+  right: -250px;
+  width: 250px;
+  height: 100%;
+  background: #111;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  padding: 60px 20px;
+  transition: right 0.3s ease;
+}
+
+.slideout-menu a {
+  color: #eee;
+  text-decoration: none;
+  margin: 10px 0;
+  font-size: 18px;
+  transition: color 0.2s ease;
+}
+
+.slideout-menu a:hover {
+  color: #ccc;
 }
 
 /* Responsive Adjustments */
